@@ -1,0 +1,167 @@
+html,
+body {
+  background: url("background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#instructions-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#instructions-popup h2 {
+  margin-top: 0;
+}
+
+#instructions-popup ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#close-instructions {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: #6441a5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/*
+html,
+body {
+  background: var(--default);
+}
+*/
+:root {
+  --default: #121213;
+  --empty: #3a3a3c;
+  --wrong: #b59f3b; /*Make sure to change this to purple onnce the how to play is there*/
+  --right: #538d4e;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* add align-items center */
+  margin-top: 5rem;
+  width: 100%;
+  height: 55vh;
+}
+
+.grid {
+  background-color: var(--default);
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+  justify-content: center; /* add justify-content center */
+}
+
+
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--empty);
+  margin: 4px;
+  color: white;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+
+.box.empty {
+  background: var(--empty);
+}
+
+.box.wrong {
+  background: var(--wrong);
+}
+
+.box.right {
+  background: var(--right);
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.title {
+  color: #6441a5;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0px 0px 10px #6441a5;
+  font-size: 4.5rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.title-word-pog {
+  position: absolute;
+  left: calc(50% + 150px);
+  transform: rotate(25deg);
+  color: yellow;
+  text-shadow: 0px 0px 10px yellow;
+  font-size: 1.95rem;
+}
+
+/*
+hr {
+  border-style: solid;
+  border-color: var(--empty);
+  border-width: 1px;
+}
+*/
+
+.footer {
+  background-color: #6441a5;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.v-separator {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.social-media-link {
+  display: flex;
+  fill: white;
+  width: 25px;
+  height: 25px;
+  margin-right: 0.75rem;
+}
+
